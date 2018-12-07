@@ -23,6 +23,14 @@ class JustObservable {
         return observable
     }
 
+    fun createObservableWithJust12345(): Observable<Int> {
+
+        //Emits 0 or n items and terminates with an success or an error event.
+        val observable: Observable<Int> = Observable.just(1,2,3,4,5)
+
+        return observable
+    }
+
     private fun subscribeWithToEvents(observable: Observable<String>) {
         var disposableObserver = observable
             .observeOn(AndroidSchedulers.mainThread())
@@ -50,5 +58,12 @@ class JustObservable {
         }, { throwableError ->
             Log.d("AppLogs", "Error = $throwableError")
         })
+    }
+
+    fun observerAndObservableInOne() {
+        Observable.just("Person1", "Person2", "Person3")
+            .subscribe{
+                Log.d("AppLogs",it)
+            }
     }
 }

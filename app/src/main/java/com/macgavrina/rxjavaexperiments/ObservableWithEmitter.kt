@@ -3,6 +3,7 @@ package com.macgavrina.rxjavaexperiments
 import android.util.Log
 import io.reactivex.Observable
 import io.reactivex.Single
+import java.util.concurrent.TimeUnit
 
 class ObservableWithEmitter {
 

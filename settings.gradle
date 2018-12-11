@@ -1,1 +1,1 @@
-include ':app', ':combining', ':hotobservables'
+include ':app', ':combining', ':hotobservables', ':subject'
